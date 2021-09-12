@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+import colors from '../../../Assets/styles/colors';
 
 export const HeaderWrap = styled.header`
     padding: 10px 20px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    background-color: #f5f5f5b4;
+    background-color: ${colors.color2};
 `;
 
 export const HeaderLogo = styled.div`
@@ -26,7 +27,7 @@ export const HeaderNav = styled.nav`
     align-items: center;
     a {
         text-decoration: none;
-        color: black;
+        color: ${colors.color1};
         text-transform: uppercase;
         font-size: 14px;
         margin-left: 15px;

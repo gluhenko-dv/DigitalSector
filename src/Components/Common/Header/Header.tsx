@@ -4,7 +4,7 @@ const Header: React.FC = () => {
     return (
         <HeaderWrap>
             <HeaderLogo>
-                <img src="./assets/images/list.svg" alt="" />
+                <img src="./Assets/images/list.svg" alt="" />
                 <span>favorites Links</span>
             </HeaderLogo>
             <HeaderNav>

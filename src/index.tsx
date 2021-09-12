@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './Assets/styles/index.scss';
-import Index from './Pages/index'
+
+import App from './app';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Index/>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
+    document.getElementById('root')
 );
-

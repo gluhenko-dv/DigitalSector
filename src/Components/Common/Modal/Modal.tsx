@@ -1,5 +1,4 @@
-import { Children } from 'react';
-import { ModalWrapper } from './Modal.styled';
+import { ModalCloseBtn, ModalWrapper } from './Modal.styled';
 
 interface ModalProps {
     isOpen: boolean;
@@ -13,7 +12,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen = false, setModalOpen, children })
 
     return (
         <ModalWrapper isOpen={isOpen}>
-            <button onClick={clickHandler} />
+            <ModalCloseBtn onClick={clickHandler} />
             {children}
         </ModalWrapper>
     );

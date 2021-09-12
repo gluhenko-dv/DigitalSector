@@ -1,38 +1,20 @@
 import { СategoriesWrapper } from './Сategories.styled';
+import { RootState } from '../../../Store/rootReducer';
+import { connect, ConnectedProps } from 'react-redux';
 
-interface СategoriesProps {
-    setSelectedCategory: (id: number) => void;
+const mapStateToProps = ({ categories }: RootState) => ({ categories });
+
+const connector = connect(mapStateToProps);
+type PropsFromRedux = ConnectedProps<typeof connector>;
+
+interface СategoriesProps extends PropsFromRedux {
+    setSelectedCategory: (id: string) => void;
 }
 
-const Сategories: React.FC<СategoriesProps> = ({ setSelectedCategory }) => {
-    const categoristList: { id: number; name: string }[] = [
-        {
-            id: 0,
-            name: 'Все'
-        },
-        {
-            id: 1,
-            name: 'Разработка'
-        },
-        {
-            id: 2,
-            name: 'Полезные книги'
-        },
-        {
-            id: 3,
-            name: 'Интересные репозитории'
-        },
-        {
-            id: 4,
-            name: 'Прочее'
-        }
-    ];
-
-    console.log('+');
-
+const Сategories: React.FC<СategoriesProps> = ({ categories, setSelectedCategory }) => {
     return (
         <СategoriesWrapper>
-            {categoristList.map(({ id, name }) => (
+            {categories.data.map(({ id, name }) => (
                 <li key={id} onClick={() => setSelectedCategory(id)}>
                     {name}
                 </li>
@@ -41,4 +23,4 @@ const Сategories: React.FC<СategoriesProps> = ({ setSelectedCategory }) => {
     );
 };
 
-export default Сategories;
+export default connector(Сategories);
