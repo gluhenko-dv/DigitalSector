@@ -5,7 +5,7 @@ const Header: React.FC = () => {
         <HeaderWrap>
             <HeaderLogo>
                 <img src="./assets/images/list.svg" alt="" />
-                <span>Best Links</span>
+                <span>favorites Links</span>
             </HeaderLogo>
             <HeaderNav>
                 <a href="https://docs.google.com/document/d/1VG49uhRvXsvKnTztDl42DJR4rrfE4ZDYk3Ae-PmPk_E/edit" target="_blank">

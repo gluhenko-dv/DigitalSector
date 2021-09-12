@@ -1,12 +1,12 @@
-import { Layout } from "../Components/Common"
+import { Layout } from '../Components/Common';
+import { LinksList } from '../Components/Sections';
 
-
-const Index:React.FC = () => {
-  return (
-    <Layout>
-      <h2>index</h2>
-    </Layout>
-  )
-}
+const Index: React.FC = () => {
+    return (
+        <Layout>
+            <LinksList />
+        </Layout>
+    );
+};
 
 export default Index;
